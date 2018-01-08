@@ -1,0 +1,19 @@
+<div *ngIf="question">
+  <h2>Question {{ question.id }} Details</h2>
+  <div><span>id: </span>{{question.id}}</div>
+<!--  <div><span>theme: </span>{{selectedQuestion.theme | uppercase}}</div>   -->
+<!--  <div><span>questionText: </span>{{selectedQuestion.questionText}}</div> -->
+
+  <div>
+    <label>Theme:
+      <input [(ngModel)]="question.theme" placeholder="theme">
+    </label>
+  </div>
+  <div>
+    <label>Question:
+      <input [(ngModel)]="question.questionText" placeholder="questionText">
+    </label>
+  </div>
+</div>
+
+<button (click)="goBack()">go back</button> <button (click)="save()">save</button> 
